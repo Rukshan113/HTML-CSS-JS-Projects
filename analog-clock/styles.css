@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 30%);
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    background-color: black;
+    border: 5px solid goldenrod;
+    border-radius: 50%; /* Make the square full circle */
+    position: relative; /* Now childrens of this that is non-static use this for positioning. */
+}
+
+.hands {
+    position: absolute;
+    top: 50%; /* Centering vertically */
+    left: 50%; /* Centering Horizontally */
+}
+
+.hands div {
+    position: absolute;
+    width: 7px;
+    height: 120px;
+    background-color: white;
+    bottom: 0;
+    transform: translateX(-50%); /* centering horizontally */
+    transform-origin: bottom; /* rotate pivot set to bottom. Default is center */
+}
+
+.hands .hour {
+    height: 80px;
+}
+
+.hands .second {
+    background-color: red;
+}
+
+/* Clock Center dot */
+.clock-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: goldenrod;
+}
+
+.numbers div {
+    font-size: 1.5rem;
+    color: aqua;
+    position: absolute;
+}
+
+.twelve {
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.six {
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nine {
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
